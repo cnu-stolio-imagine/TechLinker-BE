@@ -1,38 +1,28 @@
 ---
 name: Bug report
-about: Create a report to help us improve
-title: ''
+about: 버그 이슈 템플
+title: "[BUG] 버그 제목"
 labels: ''
 assignees: ''
 
 ---
 
-**Describe the bug**
-A clear and concise description of what the bug is.
+## 📄 Description
+버그에 대한 설명
 
-**To Reproduce**
-Steps to reproduce the behavior:
-1. Go to '...'
-2. Click on '....'
-3. Scroll down to '....'
-4. See error
+## 🐞 재현 방법
 
-**Expected behavior**
-A clear and concise description of what you expected to happen.
+(예시)
+1. `POST /api/~` 엔드포인트에서
+2. `{"key": "value"}` 를 요청했더니
+3. 서버 로그로 `NullPointerException` 이 발생하고
+4. 응답으로 `500 Internal Server Error` 가 발생했습니다.
 
-**Screenshots**
-If applicable, add screenshots to help explain your problem.
+## 🧐 예상한 결과
+예상했던 결과 서술
 
-**Desktop (please complete the following information):**
- - OS: [e.g. iOS]
- - Browser [e.g. chrome, safari]
- - Version [e.g. 22]
+## 📸 에러 메시지 스크린샷
+에러 메시지 스크린샷
 
-**Smartphone (please complete the following information):**
- - Device: [e.g. iPhone6]
- - OS: [e.g. iOS8.1]
- - Browser [e.g. stock browser, safari]
- - Version [e.g. 22]
-
-**Additional context**
-Add any other context about the problem here.
+## 🎸 ETC
+참고사항. 없을 시 삭제
