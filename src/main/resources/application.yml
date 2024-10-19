@@ -1,0 +1,32 @@
+spring:
+  application:
+    name: TechLinker
+
+  datasource: # 데이터베이스 연결을 위한 설정
+    url: jdbc:mysql://${MYSQL_HOST}:${MYSQL_PORT}/${MYSQL_DATABASE}?serverTimezone=Asia/Seoul&characterEncoding=UTF-8
+    username: ${MYSQL_USERNAME}
+    password: ${MYSQL_PASSWORD}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    database-platform: org.hibernate.dialect.MySQLDialect # 데이터베이스 문법(방언) 설정
+    open-in-view: false # 트랜잭션이 종료된 후 연결을 유지하지 않도록 설정
+    defer-datasource-initialization: true # data.sql 파일이 hibernate 초기화 이후 동작하게 하기 위한 옵션
+
+  sql:
+    init:
+      data-locations: classpath:data.sql  # 초기 데이터 설정
+
+---
+spring:
+  config:
+    activate:
+      on-profile: local
+
+  jpa:
+    hibernate:
+      ddl-auto: create
+
+  sql:
+    init:
+      mode: never   # 필요시 always로 변경
